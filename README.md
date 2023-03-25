@@ -34,7 +34,7 @@ Then execute this code,
 node index.js
 ````
 
-This code will run local serve, from "http://localhost:port". Open this URL in your browser to verify the local host is working.\
+This code will run local serve, from "http://localhost:3000". Open this URL in your browser to verify the local host is working.\
 Basically, It is hosting the static webpage, which is in "\Public\index.html". **Don't change the index.html to other name**
 
 
