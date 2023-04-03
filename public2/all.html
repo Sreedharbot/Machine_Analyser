@@ -1,0 +1,40 @@
+<!DOCTYPE html>`
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" Content="ie=edge"/>
+    <title>Part-2 Testing with java</title>
+</head>
+<h1> Welcome all to the New Test Enivorment</h1>
+
+
+
+<body>
+ <script>
+
+    getdate();
+
+    async function getdate(){
+
+        const response = await fetch('/data');
+        const Q_data = await response.json();
+        console.log(Q_data);
+
+        for (item of Q_data){
+            const root = document.createElement('div');
+            const Message = document.createElement('div');
+
+            Message.textContent = `Message: ${item.Message}`;
+
+            root.append(Message);
+            document.body.append(root);
+
+
+        }
+    }
+
+
+
+ </script>   
+</html>

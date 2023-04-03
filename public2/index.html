@@ -1,0 +1,65 @@
+<!DOCTYPE html>`
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" Content="ie=edge"/>
+    <title>Jason Testing with java</title>
+</head>
+<body>
+    <h1>Where is ISS</h1>
+
+    <p>
+        The Latitude is <span id="lat"></span><br/>
+        The Longitude is <span id="lon"></span>
+    </p1><br/>
+
+    <button id="Send" onclick=document.location.reload()>Collect</button>
+
+
+</body>
+<script>
+
+    const ISS_url = "https://api.wheretheiss.at/v1/satellites/25544";
+    async function ISS_Data() {
+    const response = await fetch(ISS_url);
+    const Json_data = await response.json();
+    
+    const {latitude, longitude} = Json_data;
+
+    document.getElementById('lat').textContent=latitude;
+    document.getElementById('lon').textContent=longitude;
+
+    console.log(Json_data.latitude)
+    console.log(Json_data.longitude)
+
+
+        const options = {
+        method: 'POST',
+        headers: {
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify(Json_data)
+ 
+    };
+
+        
+        fetch('', options).then(response=>{
+            console.log(response);
+            return response.json();
+        }).then(response=>{
+            console.log(response);
+        });
+    
+    
+};
+    
+
+
+   ISS_Data();
+
+   
+
+
+</script>
+</html>
