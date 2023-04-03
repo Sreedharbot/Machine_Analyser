@@ -37,6 +37,9 @@ node index.js
 This code will run local serve, from "http://localhost:3000". Open this URL in your browser to verify the local host is working.\
 Basically, It is hosting the static webpage, which is in "\Public\index.html". **Don't change the index.html to other name**
 
+Once Web-Server is Created. An Embedded device like (ESP8266 / ESP32) is used to send data to local server. The Local server save the data in jason, as a database and push to a webpage.
+
+
 
 
 
